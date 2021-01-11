@@ -1,6 +1,6 @@
 # DeFishare-Protocol
 On-chain DeFi aggregation protocol
-First ever fully on-chain DEX aggregator protocol by 1inch
+Full on-chain DEX aggregator protocol by 1inch Hardforked For DeFishare
 
 Build Status Coverage Status Built-with openzeppelin
 
