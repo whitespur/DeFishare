@@ -1,8 +1,8 @@
 # DeFishare-Protocol
-On-chain DeFi aggregation protocol and trading platform
-Full on-chain DEX aggregator protocol by 1inch Hardforked For DeFishare
+On-chain DeFi community with an aggregation protocol and trading platform in development and to be released in late 2021
+Full on-chain DEX aggregator with zkRollups and Optimistic Rollups to be intergrated Hardforked For DeFishare from 1Inch protocol
 
-Build Status Coverage Status Built-with openzeppelin
+Build Status Coverage Status Built-with OpenZeppelin Built-with 1InchProtocol Built-with Synthetix
 
 Integration
 Latest version is always accessible at 1split.eth (beta on 1proto.eth)
