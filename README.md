@@ -9,12 +9,12 @@ Latest version is always accessible at 1split.eth (beta on 1proto.eth)
 
 Start with checking out solidity interface: IOneSplit.sol
 
-How it works
+How it works!!! <----LOOK and READ
 This smart contract allows to get best price for tokens by aggregating prices from several DEXes.
 
 So far the service works with 2 types of exchages: split and wrap.
 
-List of split exchanges:
+List of split exchanges listed below:
 
 let splitExchanges = [
     "Uniswap",
