@@ -1,20 +1,26 @@
 # DeFishare-Protocol
-On-chain DeFi community with an aggregation protocol and trading platform in development and to be released in late 2021
-Full on-chain DEX aggregator with zkRollups and Optimistic Rollups to be intergrated Hardforked For DeFishare from 1Inch protocol
+On-chain DeFi Community with an aggregation protocol and trading platform in development to be released in late 2021.  Full on-chain DEX aggregator with zkRollups to be intergrated Hardforked For DeFishare from the 1Inch protocol
 
-Build Status Coverage Status Built-with OpenZeppelin Built-with 1InchProtocol Built-with Synthetix
 
-Integration
+Build Status Coverage 
+Built-with (Solidity 0.7.0)
+Built-with OpenZeppelin and Chainlink 
+Built-with 1InchProtocol-intergrated 
+Built-with Synthetix-intergrated 
+DApp Release - TBD | purposal (late 2021)
+
+
+Integration*
 Latest version is always accessible at 1split.eth (beta on 1proto.eth)
-
 Start with checking out solidity interface: IOneSplit.sol
 
 How it works!!! <----LOOK and READ
+
 This smart contract allows to get best price for tokens by aggregating prices from several DEXes.
 
 So far the service works with 2 types of exchages: split and wrap.
 
-List of split exchanges listed below:
+List of split exchanges utilized on the protocol below:
 
 let splitExchanges = [
     "Uniswap",
@@ -62,7 +68,7 @@ let wrapExchanges = [
     "WETH",
     "mUSD"
 ]
-How it works
+
 
 How to use it
 To use this service you have to call methods at OneSplitAudit
@@ -100,6 +106,8 @@ Compound
 Iearn
 Idle
 WETH
+
+
 Methods
 If you need Ether instead of any token use address(0) or address(0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE) as param fromToken/destToken
 
@@ -131,6 +139,7 @@ Params	Type	Description
 returnAmount	uint256	Expected returning amount of desired token
 distribution	uint256[]	Array of weights for volume distribution
 Notice: This method is equal to getExpectedReturnWithGas(fromToken, destToken, amount, parts, flags, 0)
+
 
 Example:
 
@@ -220,6 +229,7 @@ returnAmount	uint256[]	Expected returning amounts of desired tokens in tokens ar
 estimateGasAmount	uint256	Expected gas amount of exchange
 distribution	uint256[]	Array of weights for volume distribution
 Example:
+
 
  // TO DO: ...
 swap
