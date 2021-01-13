@@ -1,6 +1,10 @@
 # DeFishare-Protocol
-On-chain DeFi Community with an aggregation protocol and trading platform in development to be released in late 2021.  Full on-chain DEX aggregator with zkRollups to be intergrated Hardforked For DeFishare from the 1Inch protocol
+This is a library of smart-contracts for Testing and Development purposes which have been compiled and deployed by Mitchell with Remix. This protocol is currently in an alpha state and under active development. The beta release may or may not incorporate some if not all of these smart-contracts.
 
+DeFi Community utilizing Twitter to develop User's and a Following. The aggregation protocol and trading platform is in development, and to be released in late 2021.  
+
+Description:
+Full On-Chain DEX aggregator with zkRollups intergrated/Hardforked For (DeFishare-Beta) from the 1Inch protocol and Synthetix. Work in Progress
 
 Build Status Coverage 
 Built-with (Solidity 0.7.0)
@@ -9,19 +13,16 @@ Built-with 1InchProtocol-intergrated
 Built-with Synthetix-intergrated 
 DApp Release - TBD | purposal (late 2021)
 
-
 Integration*
 Latest version is always accessible at 1split.eth (beta on 1proto.eth)
 Start with checking out solidity interface: IOneSplit.sol
 
 How it works!!! <----LOOK and READ
+This smart contract allows you to get the best price for tokens by aggregating prices from several DEXes.
 
-This smart contract allows to get best price for tokens by aggregating prices from several DEXes.
-
-So far the service works with 2 types of exchages: split and wrap.
+So far the service works with 2 types of exchanges: Split and Wrap
 
 List of split exchanges utilized on the protocol below:
-
 let splitExchanges = [
     "Uniswap",
     "Kyber",
@@ -55,8 +56,9 @@ let splitExchanges = [
     "Kyber 3",
     "Kyber 4"
 ]
-List of wrap exchanges:
 
+
+List of wrap exchanges:
 let wrapExchanges = [
     "CHAI",
     "BDAI",
@@ -67,17 +69,14 @@ let wrapExchanges = [
     "Idle",
     "WETH",
     "mUSD"
-]
 
 
 How to use it
 To use this service you have to call methods at OneSplitAudit
-
-How to use it
-
 To swap tokens you have to figure out way from left to right points by one of paths on scheme above.
 
 For example, first of all call method getExpectedReturn (see methods section), it returns distribution array. Each element of this array matches element of splitExchanges (see above) and represents fraction of trading volume.
+
 Then call getExpectedReturnWithGas to take into account gas when splitting. This method returns more profitable distribution array for exchange.
 Then call method swap or swapWithReferral (see methods section) with param distribution which was recieved earlier from method getExpectedReturn.
 
@@ -87,7 +86,8 @@ In case of direct swap each element of distribution array matches element of spl
 
 In case of swap with transitional token each element of distribution (256 bits) matches 2 swaps: second bytes are equal to swap to transitional token, lowest bytes are equal to swap to the desired token.
 
-Supported DEXes
+
+(Supported DEXes)
 Uniswap
 Uniswap V2
 Kyber
@@ -133,8 +133,8 @@ destToken	IERC20	Address of desired token
 amount	uint256	Amount for fromToken
 parts	uint256	Number of pieces source volume could be splitted (Works like granularity, higly affects gas usage. Should be called offchain, but could be called onchain if user swaps not his own funds, but this is still considered as not safe)
 flags	uint256	Flags for enabling and disabling some features (default: 0), see flags description
-Return values:
 
+Return values:
 Params	Type	Description
 returnAmount	uint256	Expected returning amount of desired token
 distribution	uint256[]	Array of weights for volume distribution
@@ -142,7 +142,6 @@ Notice: This method is equal to getExpectedReturnWithGas(fromToken, destToken, a
 
 
 Example:
-
 let Web3 = require('web3')
 
 let provider = new Web3.providers.WebsocketProvider('wss://mainnet.infura.io/ws/v3/YOUR_TOKEN')
