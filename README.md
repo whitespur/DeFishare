@@ -28,6 +28,7 @@ This smart contract allows you to get the best price for tokens by aggregating p
 So far the service works with 2 types of exchanges: Split and Wrap
 
 List of split exchanges utilized on the protocol below:
+
 let splitExchanges = [
     "Uniswap",
     "Kyber",
@@ -64,6 +65,7 @@ let splitExchanges = [
 
 
 List of wrap exchanges:
+
 let wrapExchanges = [
     "CHAI",
     "BDAI",
@@ -77,6 +79,7 @@ let wrapExchanges = [
 
 
 How to use it
+
 To use this service you have to call methods at OneSplitAudit
 To swap tokens you have to figure out way from left to right points by one of paths on scheme above.
 
@@ -147,6 +150,7 @@ Notice: This method is equal to getExpectedReturnWithGas(fromToken, destToken, a
 
 
 Example:
+
 let Web3 = require('web3')
 
 let provider = new Web3.providers.WebsocketProvider('wss://mainnet.infura.io/ws/v3/YOUR_TOKEN')
@@ -184,6 +188,8 @@ function getExpectedReturnWithGas(
         uint256 estimateGasAmount,
         uint256[] memory distribution
     )
+    
+    
 Calculate expected returning amount of desired token taking into account how gas protocols affect price
 
 Params	Type	Description
@@ -202,6 +208,7 @@ distribution	uint256[]	Array of weights for volume distribution
 Example:
 
  // TO DO: ...
+ 
 getExpectedReturnWithGasMulti
 function getExpectedReturnWithGasMulti(
     IERC20[] memory tokens,
@@ -360,6 +367,7 @@ function makeGasDiscount(
     uint256 returnAmount,
     bytes calldata msgSenderCalldata
 )
+
 In case developer wants to manage burning GAS or CHI tokens with developer's own smartcontract one should implement this method and use FLAG_ENABLE_REFERRAL_GAS_SPONSORSHIP flag. 1proto.eth will call makeGasDiscount in developer's smartcontract.
 
 Params	Type	Description
