@@ -1,5 +1,5 @@
 # DeFishare-Protocol
-This is a library of smart-contracts for Testing and Development purposes which have been compiled and deployed by Mitchell with Remix. This protocol is currently in active development and testing. The solidity smart-contract libraries are still under construction and being created in the repository and are in no particular order at the moment. Considered a Work-In-Progress (WIP) and not fully functional.
+This is a library of smart-contracts for Testing and Development purposes which have been compiled and deployed by Mitchell with Remix. This protocol is currently in active development and testing. The solidity smart-contract libraries are still under construction and being created in the repository while in no particular order at the moment. Considered a Work-In-Progress (WIP) and not fully functional.
 
 DeFishare will utilize Twitter to establish/develop it's User's and Following or community. The DEX aggregation protocol and trading platform is also under active testing and development with a possible release in late 2021 pending community and user development.  
 
