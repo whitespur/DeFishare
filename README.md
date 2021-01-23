@@ -1,9 +1,12 @@
 # DeFishare-Protocol
-This is a library of smart-contracts for Testing and Development purposes which have been compiled and deployed by Mitchell with Remix. This protocol is currently in an alpha state and under active development. The beta release may or may not incorporate some if not all of these smart-contracts.
+This is a library of smart-contracts for Testing and Development purposes which have been compiled and deployed by Mitchell with Remix. This protocol is currently in active development and testing. The solidity smart-contract libraries are still under construction and being created in the repository and are in no particular order at the moment.
 
-DeFi Community utilizing Twitter to establish/develop User's and a Following. The aggregation protocol and trading platform is under active development, and planned to be released in late 2021 pending community development.  
+DeFi Community utilizing Twitter to establish/develop User's and a Following. The aggregation protocol and trading platform is also under active development, and planned to be released in late 2021 pending community development.  
 
-Description:
+
+
+
+DEX AGGREGATOR Description:
 Full On-Chain DEX aggregator with zkRollups intergrated/Hardforked For (DeFishare-Beta) from the 1Inch protocol and Synthetix. Work in Progress
 
 Build Status Coverage 
